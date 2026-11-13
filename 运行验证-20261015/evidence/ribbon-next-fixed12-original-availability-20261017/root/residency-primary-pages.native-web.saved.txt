@@ -1,0 +1,206 @@
+中国人民银行 国家发展改革委 工业和信息化部 公安部 市场监管总局 金融监管总局 中国证监会 国家外汇局关于进一步防范和处置虚拟货币等相关风险的通知_中国证券监督管理委员会 (https://www.csrc.gov.cn/csrc/c100028/c7614318/content.shtml)
+citeturn756view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.csrc.gov.cn/csrc/c100028/c7614318/content.shtml","lineno":null}); Total lines: 126
+--------------------------------------------------------------------------------
+Terms of Service | OKX (https://www.okx.com/en-gb/help/terms-of-service)
+citeturn756view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn755view0","pattern":"China"}); Total lines: 918
+L733: 18.6 Notices: regarding notices issued to the users, we will only deliver such notices through a formal page announcement on the OKX Platform, e-mail, customer service phone call, SMS, or regular mail delivery.
+L734: 18.7 Commissions and other Charges: we have the right to adjust the commission, spread, or other charge rates from time to time according to market conditions or as otherwise necessary. We may also introduce new fees and/or charges. Any calculations made by us in connection with the Services are final and binding on you.
+L735: ## 19. GOVERNING LAW
+L736: 
+L737: 19.1 The Terms, your use of the Services, any claim, counterclaim or dispute of any kind or nature whatsoever arising out of the Terms, directly or indirectly, shall be governed by, and construed in accordance with, the laws of England and Wales without regard to the principles of conflicts of laws thereof.
+L738: ## 20. JURISDICTION AND DISPUTE RESOLUTION (“Arbitration Agreement”)
+L739: 
+L740: 20.1 You acknowledge and agree that in the event of any dispute, controversy, difference or claim arising out of or relating to the Terms, including the existence, validity, interpretation, performance, breach or termination hereof (the “Dispute”), the parties shall first refer the Dispute to proceedings at the Hong Kong International Arbitration Centre (the “HKIAC”) in accordance with the HKIAC’s Mediation Rules in effect at the time.
+L741: 20.2 If the Dispute has not been settled upon the signing of a settlement agreement within ninety (90) days following the filing of a request for mediation set forth in Clause 20.1, such Dispute shall be referred to and finally resolved by arbitration administered by the HKIAC under the HKIAC Administered Arbitration Rules in force when the Notice of Arbitration is submitted.
+L742: The law of this arbitration clause shall be the laws of the Hong Kong Special Administrative Region of People’s Republic of China (“Hong Kong”).
+L743: 20.3 You agree that the seat of arbitration shall be Hong Kong. Unless otherwise mutually agreed between You and OKX, the number of arbitrators shall be three (3). We shall appoint one (1) arbitrator and you shall appoint one (1) arbitrator. The third arbitrator shall be appointed by the Chairman of the HKIAC. Such arbitrators shall be freely selected, and the parties shall not be limited in their selection to any prescribed list. The arbitration proceedings shall be conducted in English.
+L744: You agree that we shall not be required to provide general discovery of documents, but may be required only to produce specific, identified documents which are relevant and material to the outcome of the Dispute. Any arbitral award shall be final and binding upon the parties hereto and shall be enforceable in any competent court which has jurisdiction.
+L745: 20.4 Waiver of Jury Trial: YOU AND OKX AGREE TO WAIVE ANY RIGHT TO SUE IN COURT AND HAVE A TRIAL IN FRONT OF A JUDGE OR JURY. You and OKX are instead electing that all Disputes be resolved by arbitration under this Arbitration Agreement, except as otherwise specified herein.
+L746: This Arbitration Agreement is intended to and shall require arbitration of every claim or dispute that can lawfully be arbitrated, except for those claims and disputes which by the terms of this Arbitration Agreement are expressly excluded from the requirement to arbitrate.
+L747: 20.5 Waiver of Class and Other Non-Individualized Relief:YOU AND OKX AGREE THAT EACH OF US MAY BRING CLAIMS AGAINST THE OTHER ONLY ON AN INDIVIDUAL BASIS AND NOT AS A PLAINTIFF, PRIVATE ATTORNEY GENERAL, CLASS REPRESENTATIVE OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION, COLLECTIVE ACTION, OR REPRESENTATIVE PROCEEDING, AND FURTHER AGREE TO WAIVE THE RIGHT TO HAVE ANY CLAIM OR DISPUTE BROUGHT, HEARD, ADMINISTERED, RESOLVED, OR ARBITRATED ON A CLASS, COLLECTIVE, REPRESENTATIVE, OR MASS ACTION BASIS.
+L748: Unless you and OKX agree in writing, Disputes of more than one user cannot be arbitrated or consolidated with those of any other user, and the arbitrator shall have no authority to resolve any Dispute or issue any relief other than on an individual basis and only to the extent necessary to provide relief warranted by the claimant’s individual Dispute.
+L749: Notwithstanding anything to the contrary in this Arbitration Agreement, disputes relating to the interpretation, applicability, validity or enforceability of this Section 20.5 titled “Waiver of Class and Other Non-Individualized Relief” shall be resolved only by a court of competent jurisdiction and not by an arbitrator.
+L750: If a court decides by means of a final decision not subject to further appeal or recourse that the limitations of this Section 20.5 are invalid or unenforceable as to a particular Dispute or request for relief (such as a request for public injunctive relief), you and OKX agree that the particular challenged Dispute or requested relief – and only that particular Dispute or requested relief – shall be severed from the arbitration and may be litigated in court as specified in Section 19 (Governing Law) of the Terms.
+L751: This Section 20.5 shall be enforced in arbitration on an individual basis as to all other Disputes or remedies to the fullest extent permitted by law. Nothing in this section shall prevent you or OKX from participating in a class-wide settlement of claims, nor prevent OKX from consolidating arbitration proceedings.
+--------------------------------------------------------------------------------
+Terms of Service | OKX (https://www.okx.com/en-gb/help/terms-of-service)
+citeturn756view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn755view0","pattern":"Restricted Locations"}); Total lines: 918
+L845: Margin  | Amount of money either in the form of Digital Assets or any Fiat Currency (or a combination of both) you are required to pay in order to open and maintain a Trade as described in Clauses 4 and Clause 5 above, respectively.
+L846: Margin Lending  | Peer to Peer lending service allowing users to borrow/lend Digital Assets to one another and earn rewards.
+L847: Natural Person  | Any individual and their estate and personal representatives.
+L848: Notice  | A binding communication issued by OKX to the Users, informing the Users of specific matters of relevance with respect to the proper functioning of the OKX Platform and the User’s use of the Services, including but not limited to changes to the policies, fees or any other relevant matter, as may be required from time to time.
+L849: Notice of Arbitration  | Document that signifies a party’s intent to submit a dispute to one or more arbitrators who make a binding decision on the dispute.
+L850: OKX  | Either OKX Bahamas, OKX Brazil, OKX Singapore, or Aux Cayes as the case may be for their respective Users.
+L851: OKX Platform  | The online platform accessed either at okx.com (http://okx.com/), or via the API or the mobile application that is operated by OKX.
+L852: Order  | An instruction in relation to a Trade.
+L853: P2P  | Peer to Peer matching service, allowing users to exchange their Fiat Currency and Digital Assets with each other.
+L854: Prohibited Business  | The list of Prohibited Businesses as set out in Clause 3.
+L855: Related Parties  | Any companies which are affiliate companies, subsidiary companies, sister companies, associated companies, or related companies of OKX.
+L856: Restricted Locations  | Locations in which OKX offers no or only limited services, as indicated in Clause 2.2 and may be updated from time to time.
+L857: Risk Statement  | Statement made by OKX to the Users in relation to the risks involved in trading on the OKX Platform as set out in Clause 6.
+L858: Services  | Products, services, and other features provided by OKX to its Users under these Terms, including trading on the OKX Platform and the custody of Users’ Digital Assets.
+L859: Spot Services  | Spot transactions in Digital Assets through (a) cite52†P2P (Peer-to-Peer) or (b) Centralised exchange platform offered by OKX.
+L860: Stop Order  | The stop loss function as described in Clause 6.74.
+L861: Trade  | Transaction on the OKX Platform which results from the Fill of two Orders.
+L862: User  | A Natural Person or legal entity (e.g. corporate or institutional customers) who uses the OKX Platform and to whom OKX provides its Services pursuant to these Terms, and who has agreed to these Terms. For the avoidance of doubt, Users may include Related Parties who engage in trading activity as described in Clause 4.4.
+L863:   * cite53†1. INTRODUCTION L864:   * cite54†2. ELIGIBILITY AND PROHIBITION OF USING OUR SERVICES & BUSINESS L865:   * cite55†3. PROHIBITED BUSINESSES L866:   * cite56†4. DESCRIPTION OF OUR SERVICES L867:   * cite57†CONFLICTS OF INTEREST L868:   * cite58†5. TRADING ON THE OKX PLATFORM L869:   * cite59†Suspension of Services L870:   * cite60†6. RISK STATEMENT L871:   * cite61†Introduction L872:   * cite62†Overview of risks L873:   * cite63†Nature of Digital Assets L874:   * cite64†Value of Digital Assets and the Risk of Loss L875:   * cite65†Past performance L876:   * cite66†Suitability L877:   * cite67†Availability of Digital Assets L878:   * cite68†Currency & Conversion L879:   * cite69†Custody L880:   * cite70†OKX Trading Platform L881:   * cite71†Financial and Cyber Crime L882:   * cite72†Technology L883:   * cite73†Legal L884:   * cite74†Market L885:   * cite75†Regulatory L886:   * cite76†Stop Loss L887:   * cite77†Margin, Gearing, and Leverage L888:   * cite78†Not a Bank L889:   * cite79†Other Potential Risks L890:   * cite80†7. YOUR OKX ACCOUNT L891:   * cite81†Right of Offset and Recoveries L892:   * cite82†Electronic Communications L893:   * cite83†8. USERS’ RIGHTS AND LIMITATIONS TO LICENSE USE L894:   * cite84†9. USER OBLIGATIONS L895:   * cite85†10. FEES L896:   * cite86†11. CHANGE, INTERRUPTION, TERMINATION, AND DISCONTINUANCE OF SERVICES L897:   * cite87†12. UNCLAIMED PROPERTY L898:   * cite88†Obligations of OKX L899:   * cite89†Expenses L900:   * cite90†13. COMPLIANCE WITH YOUR LOCAL LAWS AND TAXES L901:   * cite91†14. PRIVACY POLICY L902:   * cite92†15. LIMITATION OF LIABILITY, WARRANTIES AND INDEMNIFICATION L903:   * cite93†Exclusion of liability L904:   * cite94†Limitation of liability L905:   * cite95†Force Majeure Events L906:   * cite96†Indemnification L907:   * cite97†Disclaimer of Warranties L908:   * cite98†16. VARIATIONS L909:   * cite99†17. TRANSFER OF BUSINESS L910:   * cite100†18. DISCLAIMER L911:   * cite101†19. GOVERNING LAW L912:   * cite102†20. JURISDICTION AND DISPUTE RESOLUTION (“Arbitration Agreement”) L913:   * cite103†21. SEPARABILITY, COMPLAINTS AND MISCELLANEOUS L914:   * cite104†22. DEFINITIONS AND INTERPRETATION L915:   * cite105†Interpretation L916:   * cite106†Definitions L917: cite107†google†www.googletagmanager.com --------------------------------------------------------------------------------
+Terms of Service | OKX (https://www.okx.com/en-gb/help/terms-of-service)
+citeturn756view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn755view0","pattern":"Updated"}); Total lines: 918
+L16: cite5†Trade to Earn Trade, climb leaderboards, and share new token rewards. cite6†Stake to Earn Subscribe to receive new crypto airdrops with your assets L17: 
+L18:   * cite7†Agent Trade Kit Automate your trades with AI agents and community-built skills L19: 
+L20: cite7†Agent Trade Kit Build AI agents to automate any trading strategy cite8†AI Builder Program Everything a Builder needs, all in one place cite9†Skills Discover and install trading skills L21: 
+L22: [Button: Institutional]
+L23: cite10†Institutional home The world’s most powerful suite of crypto trading solutions cite11†OKX Rubix Digital assets-as-a-service for regulated institutions cite12†APIs Seamless and ultra-low latency API connectivity cite13†Broker Program Access world-class market depth with high commissions cite14†Managed Trading Sub-accounts Manage sub-accounts, trade easily and safely with more profits cite15†Historical market data Candlesticks, aggregate trades, order book data and more cite16†Institutional Insights Our latest institutional trading research, news, and more L24: [Button: Learn]
+L25: 
+L26: cite17†Learn crypto Build strong crypto fundamentals with simple guides and tutorials cite18†How to buy crypto Follow step-by-step instructions to buy crypto cite19†Getting started Find answers to common questions on your crypto journey cite20†Crypto prices Track real-time crypto prices and market moves cite21†Crypto news Stay on top of the latest crypto news and trends cite22†Blog Read insights and stories from our team L27: 
+L28: [Button: More]
+L29: 
+L30: Products
+L31: cite23†Security of funds cite24†Status cite25†Proof of Reserves cite26†OKX Protect L32: 
+L33: Others
+L34: 
+L35: cite27†VIP program cite28†OKX Ventures cite29†Trade on TradingView cite30†Listing application cite31†Fees L36: 
+L37: cite32†Log in†my.okx.com cite33†Sign up†my.okx.com L38: # Terms of Service
+L39: 
+L40: Published on 29 Aug 2023
+L41: 
+L42: Last Updated: 17 September 2026
+L43: 
+L44: CLAUSE 20 OF THESE TERMS (AS DEFINED BELOW) REQUIRES ARBITRATION ON AN INDIVIDUAL BASIS. THIS PARAGRAPH CONTAINS AN IMPORTANT NOTICE. PLEASE READ IT CAREFULLY.
+L45: Thank you for visiting cite34†OKX.com†okx.com . These Terms of Service (“Terms”) constitute a legally binding agreement between the OKX Platform (as defined below) and you (hereinafter referred to as “User,” “user,” “You,” or “you”) and governs your use or access to the OKX Platform and/or the Services.
+L46: By visiting, accessing, or using cite34†OKX.com†okx.com or associated application program interface or mobile applications (“OKX Platform”), you are deemed to have read, understand and irrevocably consent to all of the Terms contained herein, as may be updated and amended from time to time, so please read them carefully.
+L47: The Terms constitute the agreement and understanding regarding the use of any of the Services, and any manner of accessing them, between you and the following service providers (“we,” “us,” or “our”) depending on your residency or date of registration. Where any local terms governing the use of Services provided in any particular jurisdiction (“Local Terms”) apply as indicated hereunder, such Local Terms shall govern your use of the Services instead.
+L48: OKX Europe Limited, a Malta limited liability company (“OKX EU”), which operates under the OKX brand, for Users who are residents of one of our approved operating locations within the European Economic Area. The Local Terms for such users can be found cite35†here†my.okx.com ;
+L49: OKX Europe Markets Limited, a Malta limited liability company (“OEM”), which operates under the OKX brand, for Users who are residents within the European Economic Area. OEM is licensed as an investment firm and offers financial instruments that include crypto-assets based expiry futures. The Local Terms for such users can be found cite36†here ;
+L50: OKX INC., a Delaware corporation (“OKX US”), which operates under the OKX brand, for Users who are residents of one of OKX US’s approved operating locations within the United States and its territories. The Local Terms for such users can be found cite37†here ;
+L51: 
+L52: OKX Australia Pty Ltd and OKX Australia Financial Pty Ltd, Australian registered companies ("OKX Australia"), for Users who are residents of Australia. The Local Terms for such users can be found cite38†here ;
+L53: OKX Bahamas FinTech Company Limited, a Bahamas registered company (“OKX Bahamas”), for Users who are residents of Mexico and who registered between November 16, 2022, and August 28, 2023, and institutional Users who have been registered on or after August 29, 2023;
+L54: 
+L55: OKX Middle East Fintech FZE, a UAE limited liability company (“OKX Dubai”), for Users who are residents of the UAE. The Local Terms for such users can be found cite39†here ;
+L56: OKX Serviços Digitais Ltda., a Brazil limited liability company (“OKX Brazil”), for Users who are residents of Brazil and who registered on or after June 15, 2023; and migrated Brazilian users who registered before June 15, 2023;
+L57: OKX Fintech, S.A. de C.V. ("OKX El Salvador"), for Users residing in El Salvador who registered on or after February 19, 2026, as well as Users residing in Argentina, The Bahamas, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, Guatemala, Guyana, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Suriname, and Uruguay, who may access specific products and services through OKX El Salvador in accordance with applicable laws and regulations.
+L58: The Local Terms applicable to such users can be accessed cite40†here .
+L59: OKX Fintech, S.A. de C.V. (Argentina Branch) ("OKX Argentina"), for Users residing in Argentina who registered on or after February 19, 2026. The Local Terms applicable to such users can be accessed cite41†here .
+L60: OKX Financial Pte. Ltd., a Singapore limited liability company ("OKX Financial"), shall act as the contracting party for Users who have registered with OKX Financial on or after October 31, 2025, in respect of the provision of unlicensed and unregulated activities in Singapore. These activities include, but are not limited to, Payment Token Derivatives ("PTDs"), structured products, and related services. The Supplemental Terms governing such Users can be found cite42†here ;
+L61: OKX SG Pte. Ltd., a Singapore limited liability company ("OKX Singapore" or "OKX SG"), shall act as the contracting party for Users who have registered on or after October 13, 2023 with OKX SG in respect to the provision of any licensed and regulated activities in Singapore. These activities include, without limitation, Digital Payment Token ("DPT") services and other related payment services under the Payment Services Act 2019 of Singapore.
+L62: The Supplemental Terms for such users can be found cite43†here ; and
+L63: Aux Cayes FinTech Co. Ltd., a Seychelles registered company (“Aux Cayes”), for all other Users eligible to access and use OKX’s Services.
+L64: 
+L65: The term “OKX,” as used below, means either OKX Bahamas, OKX Brazil, OKX Singapore, or Aux Cayes, as the case may be for their respective Users.
+L66: ## 1. INTRODUCTION
+L67: 
+L68: 1.1 By clicking on the “Create Account” button on the OKX Platform, or by visiting the OKX Platform, we may provide you with access to our Services, including but not limited to our trading platform, API (application program interface), technologies, products and/or other functionalities.
+L69: 1.2 You agree to be legally bound by these Terms, including any additional terms incorporated by reference. If you have any questions regarding these Terms or the use of the OKX Platform, please visit the cite44†Support Center for more information. Terms specific to only certain users of OKX will be identified as such.
+L70: 
+L71: 1.3 If you do not agree to be bound by any of these Terms, you must not access and/or use any of the Services and must leave the OKX Platform immediately.
+L72: 1.4 We reserve the right to amend or modify the Terms, and any policy or guideline of the OKX Platform, at any time and at our sole and absolute discretion, subject to Applicable Laws and Regulations.
+L73: 1.5 If you do not agree to be bound by any of the updated Terms, or any other updates, your sole and exclusive remedy will be to close your Account, within 30 days of your actual, constructive or inquiry notice, and your access or use of the Services will be permitted only to the extent necessary to immediately close your Account. You acknowledge that you may close your Account without making any trades or transactions using the Services, and that any such actions are not necessary to close your Account.
+L74: Your non-termination or continued use of the OKX Platform or Services after such a 30-day period will constitute your acceptance of the updated Terms as of your earliest notice date.
+L75: 1.6 The Terms take precedence over any other agreement you may have with us unless explicitly provided for otherwise.
+L76: 
+L77: 1.7 Any formal communication with you will be undertaken through electronic mail unless otherwise communicated. Documents will be sent to you by electronic mail, and you should seek to send any documents to us by the same means. Please visit our cite44†Support Center for assistance.
+L78: 1.8 Any formal communication with you will, unless otherwise agreed, be made in the English language. In the event of any discrepancy or conflict between the English version of these Terms or any such communications and any translation of these Terms or such communications (as applicable) in a foreign language, the English version shall prevail.
+L79: ## 2. ELIGIBILITY AND PROHIBITION OF USING OUR SERVICES & BUSINESS
+L80: 2.1 If you are a Natural Person, by accessing the OKX Platform and/or using our Services, you represent and warrant that you are at least 18 years old and legally allowed to use the Services.
+L81: If you are accessing or using our Services on behalf of a legal entity (e.g., a corporate or institutional customer), you represent and warrant that: such legal entity is duly organized and validly existing under the applicable laws of the jurisdiction of its organization; you are duly authorized by such legal entity to act on its behalf; such legal entity agrees to be responsible to us if you violate these Terms; and you have not previously been suspended or removed from accessing the OKX Platform or using the Services.
+L82: You also represent and warrant that you (or the legal entity you are representing, as the case may be) are not on and that you will not transact with anyone on any trade or economic sanctions lists of any Competent Authority, which includes without limitation: (i) Terrorism and terrorist financing - Islamic State in Iraq and the Levant (Da’esh), Al-Qaida, the Taliban, and associated individuals, groups, undertakings, and entities, any individual or entity designated by the United Nations Security Council (“UN Consolidated List”) or the United Arab Emirates ("Local Terrorist List"); and (ii) the financing of proliferation of weapons of mass destruction (WMDs) - Democratic People’s Republic of Korea: nuclear-related, other weapons of mass destruction-related, and ballistic missile-related programs; Islamic Republic of Iran: nuclear program; and other sanction lists that may be promulgated by a Competent Authority, including but not limited to the United Nations Security Council, European Union, the Monetary Authority of Singapore or Office of Foreign Asset Control.
+L83: You agree to provide written certification of your compliance of this Clause 2.1 as soon as reasonably practicable when requested by us. We may amend our eligibility criteria at any time at our sole and absolute discretion.
+L84: 2.2 We may not make all of the Services available in all markets and jurisdictions. For a complete list of such markets and jurisdictions, please see Section 3: Regulatory Landscape in the cite45†Risk and Compliance Disclosure . We may change the scope of Services available in any jurisdiction from time to time and you acknowledge that this may impact your ability to access or use the OKX Platform and/or Services. If you do not meet these eligibility requirements, you may not use our Services.
+L85: 2.3 You further represent and warrant that your access or use of the OKX Platform is of your own accord and free from direction by another party.
+L86: ## 3. PROHIBITED BUSINESSES
+L87: 
+L88: 3.1 Any use of our Services in connection with any of the following categories of activities or businesses is prohibited (“Prohibited Businesses”), and we reserve the right at all times to monitor your transactions or Accounts for the purpose of enforcing this Section 3.1 and complying with Applicable Laws and Regulations:
+L236: ### Introduction
+L237: 
+L238: 6.1 This Clause 6 provides Users with information about the risks associated with trading in Digital Assets and any other Services provided by OKX (“Risk Statement”). Applicants and Users should read this Risk Statement carefully before applying to open an Account and executing Trades. This Risk Statement should be read in conjunction with the Risk and Compliance Disclosure.
+L239: 6.2 This Clause 6 is not intended to disclose or discuss in detail all the risks associated with trading or holding Digital Assets or the use of the Services provided by OKX. This Risk Statement is not exhaustive and only outlines the general nature of the risks involved.
+L240: Users should ensure that their decisions are made on a well-informed basis, and they should undertake their own assessment as to the suitability of trading in Digital Assets in the light of their experience, objectives, financial resources and their specific needs and requirements.
+L241: 6.3 By opening an Account and undertaking Trades, a User is deemed to have reviewed, understood and accepted the risks associated with the Services provided by OKX.
+L242: 6.4 The market for Digital Assets is young and rapidly developing, thus the risks of trading Digital Assets are not fully known and/or understood. As such, OKX may update this Risk Statement periodically, as notified to Users from time to time, to amend or supplement these risks. However, OKX is not liable for any missing, incomplete, or potentially inaccurate risk disclosures.
+L243: 6.5 Users acknowledge and agree that it is the User’s responsibility to stay up to date with the updated Risk Statement published by OKX from time to time.
+L244: ### Overview of risks
+L245: 
+L246: 6.6 This Risk Statement addresses the following risks associated with transacting in Digital Assets with respect to the following matters:
+L247: 
+L248: (a) nature of Digital Assets;
+L249: 
+L250: (b) value of Digital Assets and the risk of loss;
+L251: 
+L252: (c) past performance;
+L253: 
+L254: (d) suitability;
+L255: 
+L256: (e) availability of Digital Assets.
+L257: 
+L258: (f) currency & conversion;
+L259: 
+L260: (g) financial and cybercrime;
+L261: 
+L262: (h) technology;
+L263: 
+L264: (i) legal;
+L265: 
+L266: (j) market;
+L267: 
+L268: (k) regulatory;
+L269: 
+L270: (l) stop-loss;
+L271: 
+L272: (m) margin, gearing and leverage;
+L273: (n) not a bank; and
+L274: 
+L275: (o) other potential risks.
+L276: ### Nature of Digital Assets
+L277: 
+L278: 6.7 Digital Assets are not legal tender, are not backed by any government and may not be backed by any physical assets.
+L279: 
+L280: 6.8 There is no assurance that a Person who accepts Digital Assets as a form of payment or a store of value will continue to do so in the future. Digital Assets may lose some or all long-term purchasing power and widespread acceptance of crypto assets may decline.
+L281: 6.9 Digital Assets are generally considered a high-risk asset class. You must therefore exercise prudent judgment when trading Digital Assets (as well as any other assets).
+L282: 
+L283: 6.10 The nature of Digital Assets may be very complex, and their terms, features, and/or risks may not be readily or fully understood due to the complex structure, novelty, and reliance on technological features.
+L284: 6.11 Digital Asset transactions are generally irreversible. Thus, accidental or fraudulent transactions with respect to Digital Assets may not be recoverable.
+L285: ### Value of Digital Assets and the Risk of Loss
+L286: 
+L287: 6.12 Investing in Digital Assets carries a high level of risk and, as such, may not be suitable for all investors. Users may lose some or all of their money. A User should not transact in Digital Assets if they are seeking a regular or low risk return on their invested capital. Unlike traditional assets, Digital Assets may not have any underlying or intrinsic asset value or any assets supporting their price.
+L288: 6.13 Trading in Digital Assets is highly speculative and involves significant risk. There may be limited or no fundamental reasoning behind the pricing of Digital Assets, which may be subject to irrational and uncontrollable market forces. Whether the future price for a Digital Asset will increase or decrease is unpredictable and purely speculative. Likewise, there is a risk that a Digital Asset may not have any value whatsoever. Digital Assets are therefore traded at the User's own risk.
+L289: 6.14 Digital Asset values are highly volatile and can fluctuate substantially in comparison to Fiat Currencies or traditional investment products. Digital Asset values may be subject to influence by many factors, including liquidity levels, public speculation, dramatic shifts in investor confidence, operational interruptions, and/or market share competition. As a result, market conditions can change significantly in a very short period of time.
+L290: Furthermore, the value of a Digital Asset may never recover if there is no interest in or development of the Digital Asset. A User is therefore at risk of losing all or a substantial portion of the value of the User’s Digital Assets. Such losses can occur in a very short period of time.
+L699: If you have reason to believe that your data is no longer secure, you should contact OKX using the contact details published on the OKX Platform or as notified to the Users from time to time.
+L700: ## 16. VARIATIONS
+L701: 
+L702: 16.1 OKX has the right to amend, replace, supplement or delete (each, an “Amendment”) these Terms or any part of these Terms.
+L703: 16.2 OKX will make reasonable efforts to provide you with notice of an Amendment by posting the revised Terms and changing the "Last updated" date at the top of the Terms, or by emailing Users at their provided email addresses, or by any other means as determined by us at our sole discretion. An Amendment will be effective immediately upon posting the revisions to the OKX Platform or at the instant that we transmit the information.
+L704: These Amendments will apply at that instant to all then current and subsequent uses or Services.However, we may occasionally need to make changes without notifying you. This may include but is not limited to circumstances where:
+L705: (a) we are making the change as a result of legal and/or regulatory changes;
+L706: 
+L707: (b) the changes are to make these Terms clearer to you; and/or
+L708: 
+L709: (c) any other reason for which means there is no time to give you notice.
+L710: 
+L711: 16.3 If you do not accept an Amendment, your sole remedy will be to stop using the Services and close your Account in accordance with the provision of the Terms. Continued use of the Services will constitute agreement with the revised Terms.
+L712: ## 17. TRANSFER OF BUSINESS
+L713: 
+L714: 17.1 In the event of a transfer of the whole of part of the business of OKX to any third party, the User consents to the transfer of the business relationship between the User and OKX, which includes but is not limited to the User’s:
+L715: 
+L716: (a) Account;
+L717: 
+L718: (b) Assets;
+L719: 
+L720: (c) liabilities; and
+L721: 
+L722: (d) Protected Data.
+L850: OKX  | Either OKX Bahamas, OKX Brazil, OKX Singapore, or Aux Cayes as the case may be for their respective Users.
+L851: OKX Platform  | The online platform accessed either at okx.com (http://okx.com/), or via the API or the mobile application that is operated by OKX.
+L852: Order  | An instruction in relation to a Trade.
+L853: P2P  | Peer to Peer matching service, allowing users to exchange their Fiat Currency and Digital Assets with each other.
+L854: Prohibited Business  | The list of Prohibited Businesses as set out in Clause 3.
+L855: Related Parties  | Any companies which are affiliate companies, subsidiary companies, sister companies, associated companies, or related companies of OKX.
+L856: Restricted Locations  | Locations in which OKX offers no or only limited services, as indicated in Clause 2.2 and may be updated from time to time.
+L857: Risk Statement  | Statement made by OKX to the Users in relation to the risks involved in trading on the OKX Platform as set out in Clause 6.
+L858: Services  | Products, services, and other features provided by OKX to its Users under these Terms, including trading on the OKX Platform and the custody of Users’ Digital Assets.
+L859: Spot Services  | Spot transactions in Digital Assets through (a) cite52†P2P (Peer-to-Peer) or (b) Centralised exchange platform offered by OKX.
+L860: Stop Order  | The stop loss function as described in Clause 6.74.
+L861: Trade  | Transaction on the OKX Platform which results from the Fill of two Orders.
+L862: User  | A Natural Person or legal entity (e.g. corporate or institutional customers) who uses the OKX Platform and to whom OKX provides its Services pursuant to these Terms, and who has agreed to these Terms. For the avoidance of doubt, Users may include Related Parties who engage in trading activity as described in Clause 4.4.
+L863:   * cite53†1. INTRODUCTION L864:   * cite54†2. ELIGIBILITY AND PROHIBITION OF USING OUR SERVICES & BUSINESS L865:   * cite55†3. PROHIBITED BUSINESSES L866:   * cite56†4. DESCRIPTION OF OUR SERVICES L867:   * cite57†CONFLICTS OF INTEREST L868:   * cite58†5. TRADING ON THE OKX PLATFORM L869:   * cite59†Suspension of Services L870:   * cite60†6. RISK STATEMENT L871:   * cite61†Introduction L872:   * cite62†Overview of risks L873:   * cite63†Nature of Digital Assets L874:   * cite64†Value of Digital Assets and the Risk of Loss L875:   * cite65†Past performance L876:   * cite66†Suitability 

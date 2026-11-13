@@ -1,0 +1,184 @@
+ribbon-docs/theta-vault/ribbon-v2.md at master · ribbon-finance/ribbon-docs · GitHub (https://github.com/ribbon-finance/ribbon-docs/blob/master/theta-vault/ribbon-v2.md)
+citeturn675view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://github.com/ribbon-finance/ribbon-docs/blob/master/theta-vault/ribbon-v2.md","lineno":null}); Total lines: 261
+L0: cite0†Skip to content L1: ## Navigation Menu
+L2: 
+L3: cite1†Sign in L4: 
+L5: Appearance settings
+L6: 
+L7:   * Platform
+L8: 
+L9:     * AI CODE CREATION
+L10:       * cite2†GitHub CopilotWrite better code with AI L11:       * cite3†GitHub Copilot appDirect agents from issue to merge L12:       * cite4†MCP RegistryIntegrate external tools L13: 
+L14:     * DEVELOPER WORKFLOWS
+L15:       * cite5†ActionsAutomate any workflow L16:       * cite6†CodespacesInstant dev environments L17:       * cite7†IssuesPlan and track work L18:       * cite8†Code ReviewManage code changes L19:       * cite9†Code QualityEnforce quality at merge L20:     * APPLICATION SECURITY
+L21:       * cite10†GitHub Advanced SecurityFind and fix vulnerabilities L22:       * cite11†Code securitySecure your code as you build L23:       * cite12†Secret protectionStop leaks before they start L24: 
+L25:     * EXPLORE
+L26:       * cite13†Why GitHub L27:       * cite14†Documentation†docs.github.com L28:       * cite15†Blog†github.blog L29:       * cite16†Changelog†github.blog L30:       * cite17†Marketplace L31: 
+L32: cite18†View all features L33: 
+L34:   * Solutions
+L35:     * BY COMPANY SIZE
+L36:       * cite19†Enterprises L37:       * cite20†Small and medium teams L38:       * cite21†Startups L39:       * cite22†Nonprofits L40: 
+L41:     * BY USE CASE
+L42:       * cite23†App Modernization L43:       * cite24†DevSecOps L44:       * cite25†DevOps L45:       * cite26†CI/CD L46:       * cite27†View all use cases L47: 
+L48:     * BY INDUSTRY
+L49:       * cite28†Healthcare L50:       * cite29†Financial services L51:       * cite30†Manufacturing L52:       * cite31†Government L53:       * cite32†View all industries L54: 
+L55: cite33†View all solutions L56: 
+L57:   * Resources
+L58:     * EXPLORE BY TOPIC
+L59:       * cite34†AI L60:       * cite35†Software Development L61:       * cite36†DevOps L62:       * cite37†Security L63:       * cite38†View all topics L64: 
+L65:     * EXPLORE BY TYPE
+L66:       * cite39†Customer stories L67:       * cite40†Events & webinars L68:       * cite41†Ebooks & reports L69:       * cite42†Business insights L70:       * cite43†GitHub Skills†skills.github.com L71:     * SUPPORT & SERVICES
+L72:       * cite14†Documentation†docs.github.com L73:       * cite44†Customer support†support.github.com L74:       * cite45†Community forum L75:       * cite46†Trust center L76:       * cite47†Partners L77: 
+L78: cite48†View all resources L79: 
+L80:   * Open Source
+L81: 
+L82:     * COMMUNITY
+L83:       * cite49†GitHub SponsorsFund open source developers L84:     * PROGRAMS
+L85:       * cite50†Security Lab†securitylab.github.com L86:       * cite51†Maintainer Community†maintainers.github.com L87:       * cite52†GitHub Stars†stars.github.com L88:       * cite53†Archive Program†archiveprogram.github.com L89: 
+L90:     * REPOSITORIES
+L91:       * cite54†Topics L92:       * cite55†Trending L93:       * cite56†Collections L94: 
+L95:   * Enterprise
+L96: 
+L97:     * ENTERPRISE SOLUTIONS
+L98:       * cite19†Enterprise platformAI-powered developer platform L99:     * AVAILABLE ADD-ONS
+L100:       * cite10†GitHub Advanced SecurityEnterprise-grade security features L101:       * cite57†Copilot for BusinessEnterprise-grade AI features L102:       * cite58†Premium SupportEnterprise-grade 24/7 support L103: 
+L104:   * cite59†Pricing L105: 
+L106: Search`/`
+L107: 
+L108: cite1†Sign in L109: 
+L110: cite60†Sign up L111: 
+L112: Appearance settings
+L113: You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert
+L114: 
+L115:   1. cite61†ribbon-finance L116:   2. cite62†ribbon-docs L117: ## Repository navigation
+L118: 
+L119:   *   * cite62†Code L120:   * cite63†Issues L121:   * cite64†Pull requests3 (3) L122:   * cite65†Actions L123:   * cite66†Projects L124:   * cite67†Security and quality L125:   * cite68†Insights L126: 
+L127: More items
+L128: 
+L129: ## Files Expand file tree
+L130: 
+L131: master
+L132: 
+L133: ## Breadcrumbs
+L134: 
+L135:   1. cite69†ribbon-docs L136:   2. /cite70†theta-vault L137: 
+L138: /
+L139: 
+L140: # ribbon-v2.md
+L141: 
+L142: Copy path
+L143: 
+L144: [Input: Go to file]
+L145: 
+L146: Blame More file actions
+L147: 
+L148: Blame More file actions
+L149: 
+L150: ## Latest commit
+L151: 
+L152: 
+L153: 
+L154: ## History
+L155: 
+L156: History
+L157: 
+L158: master
+L159: 
+L160: ## Breadcrumbs
+L161: 
+L162:   1. cite69†ribbon-docs L163:   2. /cite70†theta-vault L164: 
+L165: /
+L166: # ribbon-v2.md
+L167: 
+L168: Copy path
+L169: 
+L170: Top
+L171: 
+L172: ## File metadata and controls
+L173: 
+L174:   * Preview
+L175: 
+L176:   * Code
+L177: 
+L178:   * Blame
+L179: 
+L180: 90 lines (61 loc) · 7.12 KB
+L181: 
+L182: cite71†Raw L183: 
+L184: Copy raw file
+L185: 
+L186: Download raw file
+L187: 
+L188: Outline
+L189: 
+L190: Edit and raw actions
+L191: 
+L192: # Theta vaults architecture
+L193: ## Vault flow example
+L194:   1. User deposits 100 ETH into T-ETH-C (ETH call).
+L195:   2. On Friday 8 am UTC, the vault closes the previous week round and subsequently uses 100% of its funds to mint 100 cite72†otokens†opyn.gitbook.io , which are ERC20 representations of options contracts. The 100 ETH is locked for a week in Opyn.
+L196:   3. After receiving the 100 otokens, the vault puts it up for auction on cite73†Paradigm .
+L197:      * Registered users can participate and bid on the otokens. They pay the premiums for the otoken in ETH. Paradigm can use different kinds of auctions to maximise depositors' returns (e.g. cite74†blind auctions†en.wikipedia.org )
+L198:      * At the end of the auction, the vault collects 1 ETH in premiums in the form of ETH.
+L199:      * Any remaining otokens that are not bought are burned, redeeming 1 otoken for 1 unit of collateral from Opyn.
+L200:   4. On the next Friday 8 am UTC,
+L201:      * If the options expire in the money, the vault withdraws less than 100 ETH from Opyn.
+L202:      * If the options expire out the money, the vault withdraws exactly 100 ETH.
+L203:   5. Let's say it expires out the money. The vault repeats step 2 with 101 ETH (original 100 ETH + 1 ETH premium).
+L204: ### Codebase
+L205: Name  | Description
+L206: --- | ---
+L207: cite75†libraries/Vault.sol | Contains all data structures shared across all vault types
+L208: cite76†libraries/VaultLifecycle.sol | Contains all logic related to how the Vault functions on a weekly basis
+L209: cite77†vaults/BaseVaults/base/RibbonVault.sol | Contains all common logic like accounting and options rolling shared across RibbonThetaVault and RibbonDeltaVault.
+L210: cite78†vaults/BaseVaults/RibbonThetaVault.sol | Theta Vault contract that creates short options position with Opyn on a weekly basis
+L211: ## Deposit Flow
+L212: 
+L213: IMPORTANT: this is a technical explanation, if you need assistance on making a deposit please refer to cite79†this page !
+L214: 
+L215:   1. The user deposits 1 ETH into TV.
+L216:   2. We first check if they have an existing `DepositReceipt` from the past `round`. Using the `round` and `amount`, we update the `unredeemedShares` field. This essentially tracks how many shares the user owns, but has not yet redeemed.
+L217: 
+L218:     `struct DepositReceipt {
+L219:     	round
+L220:     	amount
+L221:     	unredeemedShares
+L222:     }
+L223:     `
+L224:   1. We create the DepositReceipt with the new details.
+L225:   2. At `rollToNextOption`, the vault will mint all the shares that are owed to users to `address(this)`. This increments the `vaultState.round`.
+L226:   3. Since the round is concluded, the user's vault shares should show up by calling `RibbonVault.shares(account)`
+L227: 
+L228: The end result:
+L229:   * Their shares show up automatically once the round concludes.
+L230:   * `DepositReceipt`s are used to track all the user's unredeemed shares. This is used for withdrawals and redemptions in the future.
+L231: ## Withdrawal Flow
+L232: 
+L233: IMPORTANT: this is a technical explanation, if you need assistance on making a withdrawal please refer to cite80†this page !
+L234: 
+L235: The withdrawal flow is slightly more involved. We have two types of withdrawals - Standard and Instant withdrawals.
+L236: ### Standard withdrawals
+L237:   * Withdrawals are created with the `initiateWithdraw` function, which queues the shares to be burned.
+L238:   * Withdrawals are completed with `completeWithdraw` function, which burns the shares, and returns the assets.
+L239:   * Users can only call `completeWithdraw` only AFTER the week's Friday 10am UTC. For example, the user calls `initiateWithdraw` on Wednesday. They can only complete the withdrawal after the same week's Friday 10am UTC.
+L240:   * Withdrawals stack on top of each other. This means that if I do `initiateWithdraw(10)`, and I do `initiateWithdraw(20)` again, I will have a total withdrawal of 30 shares by Friday.
+L241: ### Instant withdrawals
+L242: 
+L243:   * Instant withdrawals are only accessible to funds that are deposited mid-week.
+L244:   * For example, user deposits 10 ETH into TV on Wednesday. They can call `withdrawInstantly` to return up to 10 ETH, from Wednesday till Friday.
+L245: ## Share Redemption Flow
+L246: 
+L247: IMPORTANT: this is a technical explanation, if you need assistance on redeeming your vault shares please refer to cite81†this page !
+L248: 
+L249: As mentioned before, when the user deposits into the vault, the vault mints and holds custody of the user's shares on `address(this)`. This is not ideal for protocols or Meta-Vaults that want to hold custody of their shares. By calling the `redeem` or `maxRedeem` function, contracts are able to take custody of their vault shares.
+L250: The share redemption flow is also triggered implicitly when users call `initiateWithdraw`.
+L251: ## Access Control
+L252: 
+L253: Name  | Privileges
+L254: --- | ---
+L255: Owner  | The owner can set key parameters of the vault such as feeRecipient, performanceFee, managementFee, deposit cap etc.Some functions in the vault's lifecycle is only limited to the owner, such as commitAndClose and rollToNextOption.
+L256: Admin  | The admin can upgrade the proxy's implementation address.
+L257: 
+L258: Both of these privileged roles use a Gnosis Safe multisig wallet.
+L259: 
+L260: You can’t perform that action at this time.

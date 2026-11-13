@@ -1,0 +1,41 @@
+import json,pathlib,hashlib,sys,datetime,collections
+v=json.loads(sys.argv[1]);p=pathlib.Path(v['phase'])/'root';old=p.parents[2]/'ribbon-fixed12-live-ledger-20261017/root';base=p.parents[2];old=base/'ribbon-fixed12-live-ledger-20261017/root'
+# base here is evidence; explicit fallback
+old=pathlib.Path('/Volumes/EXTERNAL/亚力克斯 /运行验证-20261015/evidence/ribbon-fixed12-live-ledger-20261017/root')
+load=lambda name:json.loads((p/name).read_text());pos=lambda x:(int(x['blockNumber'],16),int(x['logIndex'],16));topic=v['topics'];addr='0x25751853eab4d0eb3652b5eb6ecb102a2789644b'
+fee=json.loads((old/'round09-open-receipt.original.txt').read_text())['result'];opening=json.loads((old/'round08-open-receipt.original.txt').read_text())['result'];end=(int(fee['blockNumber'],16),min(int(x['logIndex'],16) for x in fee['logs']));start=(int(opening['blockNumber'],16),max(int(x['logIndex'],16) for x in opening['logs']))
+assert fee['status']==opening['status']=='0x1'
+names=['weth-vault-topic1-through-fee-page1.original.txt','weth-vault-topic2-through-fee-page1.original.txt'];unique={}
+for name in names:
+ for x in load(name)['result']:
+  key=(x['transactionHash'],x['logIndex']);assert key not in unique or unique[key]==x;unique[key]=x
+balance=0;beforeblock=0;flows=[];ignored=collections.Counter()
+for x in sorted(unique.values(),key=pos):
+ t=x['topics'];signature=t[0];amount=int(x['data'],16);delta=0
+ if signature==topic['wethdeposit'] and '0x'+t[1][-40:]==addr:delta=amount
+ elif signature==topic['wethwithdraw'] and '0x'+t[1][-40:]==addr:delta=-amount
+ elif signature==topic['transfer']:
+  if '0x'+t[1][-40:]==addr:delta-=amount
+  if '0x'+t[2][-40:]==addr:delta+=amount
+ else:ignored[signature]+=1
+ if pos(x)<end:
+  balance+=delta
+  if delta:flows.append({'tx':x['transactionHash'],'block':pos(x)[0],'log_index':pos(x)[1],'delta_wei':str(delta),'topic':signature})
+ if pos(x)[0]<end[0]:beforeblock+=delta
+anchorbefore=load('weth-balance-before-fee-block.original.txt');anchorafter=load('weth-balance-after-fee-block.original.txt');assert anchorbefore['status']=='1' and anchorafter['status']=='1';assert beforeblock==int(anchorbefore['result'])
+allpost=sum((int(x['data'],16) if x['topics'][0]==topic['wethdeposit'] else -int(x['data'],16) if x['topics'][0]==topic['wethwithdraw'] else ((int(x['data'],16) if len(x['topics'])>2 and '0x'+x['topics'][2][-40:]==addr else 0)-(int(x['data'],16) if '0x'+x['topics'][1][-40:]==addr else 0)) if x['topics'][0]==topic['transfer'] else 0) for x in unique.values())
+assert allpost==int(anchorafter['result'])
+pending=0;pendingrows=[]
+for x in load('vault-all-events-current-cycle-page1.original.txt')['result']:
+ if not start<pos(x)<end:continue
+ t=x['topics'][0]
+ if t not in [topic['deposit'],topic['instant']]:continue
+ h=x['data'][2:];assert len(h)==128;amount=int(h[:64],16);roundnum=int(h[64:],16);assert roundnum==10
+ delta=amount if t==topic['deposit'] else -amount;pending+=delta;pendingrows.append({'tx':x['transactionHash'],'block':pos(x)[0],'log_index':pos(x)[1],'round':roundnum,'amount_wei':str(amount),'kind':'Deposit' if delta>=0 else 'InstantWithdraw'})
+L=int(json.loads((old/'fixed12-actual-cashflow-ledger.json').read_text())['rows'][7]['collateral_deposited_wei']);A=balance-pending;d=A-L;assert d>0
+PF=27107332003284669244;F=32246771456298447865;M=F-PF
+ceildiv=lambda a,b:(a+b-1)//b
+rates={'performance_raw_min':ceildiv(PF*10**8,d),'performance_raw_max':ceildiv((PF+1)*10**8,d)-1,'management_raw_min':ceildiv(M*10**8,A),'management_raw_max':ceildiv((M+1)*10**8,A)-1,'scope':'inferred from observed fees plus independently reconstructed B/P and receiptbound L under sourcedformula; not rawstorage observations'}
+orig=load('actual-weth-implementation-source.original.txt')['result'][0]['SourceCode'];j=json.loads(orig[1:-1]) if orig.startswith('{{') else json.loads(orig);(p/'actual-WETH9.only-contract.source.txt').write_text(j['sources']['WETH9.sol']['content'])
+summary={'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'own integer accounting of actual existing logs, no price/backtest/sourceexecution','cutoff':{'after_open_receipt':str(old/'round08-open-receipt.original.txt'),'after_open_block_log':start,'before_fee_receipt':str(old/'round09-open-receipt.original.txt'),'before_fee_block_log':end},'WETH_index_counts':[len(load(x)['result']) for x in names],'unique_index_records':len(unique),'cashflow_records_before_fee':len(flows),'WETH_balance_before_fee_wei':str(balance),'WETH_balance_prior_block_wei':str(beforeblock),'WETH_balance_after_target_block_wei':str(allpost),'both_historical_balance_anchors_match':True,'sameblock_change_before_fee_wei':str(balance-beforeblock),'pending_event_count':len(pendingrows),'pending_from_currentcycle_deposits_minus_instant_withdraw_wei':str(pending),'A_balance_without_pending_wei':str(A),'L_previous_locked_from_actualcollateral_wei':str(L),'difference_A_minus_L_wei':str(d),'actual_premium_wei':'29407258000000000000','difference_minus_premium_wei':str(d-29407258000000000000),'performance_fee_wei':str(PF),'management_fee_by_difference_wei':str(M),'total_fee_wei':str(F),'inferred_integer_rate_ranges':rates,'ignored_nonbalance_events':dict(ignored),'current_limit':'sameproviderlogs/balanceanchors, Lsourcepathstillneeds independentreview, rates inferred not stored; reasonfordifference beyondpremium not yet certified','inputs':{str(f):{'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'bytes':f.stat().st_size} for f in [p/x for x in names+['vault-all-events-current-cycle-page1.original.txt','weth-balance-before-fee-block.original.txt','weth-balance-after-fee-block.original.txt']]+[old/'round08-open-receipt.original.txt',old/'round09-open-receipt.original.txt',old/'fixed12-actual-cashflow-ledger.json']}}
+(p/'independent-WETH-and-pending-accounting.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');(p/'WETH-cashflow-rows-before-fee.json').write_text(json.dumps(flows,indent=2)+'\n');(p/'currentcycle-pending-event-rows.json').write_text(json.dumps(pendingrows,indent=2)+'\n');print(json.dumps({k:x for k,x in summary.items() if k!='inputs'},ensure_ascii=False,indent=2))

@@ -1,0 +1,30 @@
+import json,sys,pathlib,datetime,hashlib,collections
+v=json.loads(sys.argv[1]);p=pathlib.Path(v['phase']);old=pathlib.Path(v['prior']);proto=json.loads((p/'protocol.json').read_text());rows=json.loads((old/'root/whole-vault-events-combined.json').read_text());T=v['topics'];vault='0x25751853eab4d0eb3652b5eb6ecb102a2789644b';zero='0x'+'0'*40
+addr=lambda t:'0x'+t[-40:];num=lambda x:int(x,16);words=lambda s:[int(s[i:i+64],16) for i in range(2,len(s),64)];key=lambda r:(num(r['blockNumber']),num(r['logIndex']));rows.sort(key=key)
+results=[]
+for a in proto['cohort']:
+ ev=[];sh=0;Q=0;dep=[];ins=[];reds=[];outs=[];im=[];external=[]
+ for r in rows:
+  ts=r['topics'];kind=next((k for k,t in T.items() if k!='keeperSelector' and t==ts[0]),'other')
+  if kind=='transfer':
+   f=addr(ts[1]);to=addr(ts[2]);amt=words(r['data'])[0]
+   if a not in [f,to]:continue
+   sh+=(amt if to==a else 0)-(amt if f==a else 0)
+   if (f==a and to not in [vault,zero]) or (to==a and f not in [vault,zero]):external.append({'from':f,'to':to,'amount_raw':str(amt),'tx':r['transactionHash'],'block':num(r['blockNumber'])})
+   continue
+  if len(ts)<2 or addr(ts[1])!=a or kind not in ['deposit','instant','redeem','initiate','withdraw']:continue
+  w=words(r['data']);e={'kind':kind,'value_raw':str(w[0]),'second_raw':str(w[1]),'tx':r['transactionHash'],'block':num(r['blockNumber']),'log':num(r['logIndex']),'utc':datetime.datetime.fromtimestamp(num(r['timeStamp']),datetime.timezone.utc).isoformat()};ev.append(e)
+  if kind=='deposit':dep.append(e)
+  elif kind=='instant':im.append(e)
+  elif kind=='redeem':reds.append(e)
+  elif kind=='initiate':ins.append(e);Q+=w[0]
+  elif kind=='withdraw':outs.append(e);Q-=w[1]
+ assert sh>=0 and Q>=0,(a,sh,Q)
+ lastd=dep[-1] if dep else None;lasti=ins[-1] if ins else None
+ maxredeem_cleared=bool(lastd and lasti and (lasti['block'],lasti['log'])>(lastd['block'],lastd['log']) and int(lasti['second_raw'])>int(lastd['second_raw']))
+ fully_instant=not ins and not reds and sum(int(x['value_raw']) for x in dep)==sum(int(x['value_raw']) for x in im)
+ cls='CASH_EXIT_PATH_CANDIDATE_SOURCE_AND_ORIGINALS_PENDING' if sh==0 and Q==0 and maxredeem_cleared and outs and not external else ('INSTANT_ONLY_WITHDRAWN_NO_OPTION_EXPOSURE' if sh==0 and Q==0 and fully_instant and not external else 'OTHER_RIGHTS_OR_UNKNOWN_BASIS')
+ results.append({'address':a,'classification':cls,'wallet_shares_from_all_events_raw':str(sh),'queued_shares_from_events_raw':str(Q),'last_deposit_round':lastd['second_raw'] if lastd else None,'last_initiate_round':lasti['second_raw'] if lasti else None,'final_initiate_automatic_maxredeem_candidate':maxredeem_cleared,'external_share_transfers':external,'events':ev,'counts':dict(collections.Counter(x['kind'] for x in ev)),'cash_results_not_yet_scored':True})
+fp=lambda f:{'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'bytes':f.stat().st_size}
+result={'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'allfixed41 event/source-path classification before receiptgas or profit assessment','inputs':{str(p/'protocol.json'):fp(p/'protocol.json'),str(old/'root/whole-vault-events-combined.json'):fp(old/'root/whole-vault-events-combined.json')},'count':len(results),'classification_counts':dict(collections.Counter(x['classification'] for x in results)),'rows':results,'models':0,'backtests':0,'trades':0};f=p/'root/all41-event-path-classification.json';f.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'classifications':result['classification_counts'],'candidates':[{'address':r['address'],'counts':r['counts'],'events':r['events']} for r in results if r['classification'].startswith('CASH_EXIT')]},ensure_ascii=False))
+(p/'root/cohort-classification-method.inert-python.txt').write_text(v['method_text'])

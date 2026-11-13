@@ -1,0 +1,32 @@
+import json,pathlib,hashlib,datetime,sys
+v=json.loads(sys.argv[1]);p=pathlib.Path(v['phase'])/'root';b=p.parents[2];old=b/'evidence/ribbon-fixed12-live-ledger-20261017/root';v95=b/'evidence/ribbon-nov08-fee-basis-20261017/root';load=lambda x:json.loads(x.read_text());t=v['topics'];addr='0x463987c5e66c3ebf903c29973f41581134d13f3a';zero='0x'+'0'*40;cut=(13242896,395);pos=lambda x:(int(x['blockNumber'],16),int(x['logIndex'],16));words=lambda x:[int(x['data'][i:i+64],16) for i in range(2,len(x['data']),64)]
+rows=[];pages=[]
+for i in range(1,5):
+ j=load(p/('whole-vault-fixed-window-events-page'+str(i)+'.original.txt'));assert isinstance(j['result'],list);pages.append(len(j['result']));rows+=j['result']
+assert pages==[1000,1000,186,0];assert len({(x['transactionHash'],x['logIndex']) for x in rows})==len(rows);rows.sort(key=pos)
+S=Q=S0=P0=0;minted=burned=0;ownertransfer=0;shareholds=0;selected_capital=selected_cash=0;selectedpending=0
+for x in rows:
+ sig=x['topics'][0];w=words(x);pre=pos(x)<cut
+ if sig==t['transfer']:
+  fr='0x'+x['topics'][1][-40:];to='0x'+x['topics'][2][-40:];a=w[0];delta=(a if fr==zero else 0)-(a if to==zero else 0);S+=delta
+  if fr==zero:minted+=a
+  if to==zero:burned+=a
+  if pre:S0+=delta
+  shareholds+=(a if to==addr else 0)-(a if fr==addr else 0)
+ if sig==t['initiate']:Q+=w[0]
+ if sig==t['withdraw']:Q-=w[1]
+ assert S>=0 and Q>=0
+ if pre and sig==t['deposit'] and w[1]==2:P0+=w[0]
+ if pre and sig==t['instant'] and w[1]==2:P0-=w[0]
+ if sig in [t['deposit'],t['instant']] and '0x'+x['topics'][1][-40:]==addr:
+  if sig==t['deposit']:selected_capital+=w[0];selectedpending+=w[0]
+  else:selected_cash+=w[0];selectedpending-=w[0]
+weth=load(v95/'WETH-cashflow-rows-before-fee.json');B0=sum(int(x['delta_wei']) for x in weth if (x['block'],x['log_index'])<cut);PPS0=(B0-P0)*10**18//S0;Hesc=selectedpending*10**18//PPS0;H=Hesc+shareholds
+r13=load(old/'round13-open-receipt.original.txt')['result'];assert r13['status']=='0x1';locked=[words(x)[0] for x in r13['logs'] if x['address']=='0x25751853eab4d0eb3652b5eb6ecb102a2789644b' and x['topics'][0]==t['open']];assert len(locked)==1;W=load(p/'terminal-vault-WETH-balance.original.txt');N=load(p/'terminal-vault-native-ETH-balance.original.txt');WB=load(p/'terminal-holder-share-wallet-balance.original.txt');assert W['status']==N['status']==WB['status']=='1';assert shareholds==int(WB['result']);G=int(W['result'])+int(N['result'])+locked[0];D=S-Q;assert D>0
+gasrows=[]
+for n in ['selected-deposit-root-receipt.original.txt','selected-second-migration-receipt.original.txt','selected-instant-withdraw-receipt.original.txt']:
+ r=load(p/n)['result'];assert r['from']==addr and r['status']=='0x1';gas=int(r['gasUsed'],16)*int(r['effectiveGasPrice'],16);gasrows.append({'file':str(p/n),'hash':r['transactionHash'],'gas_wei':str(gas)})
+gas=sum(int(x['gas_wei']) for x in gasrows);UB=(H*G+D-1)//D;deltaUB=selected_cash+UB-selected_capital-gas
+f=lambda n:format(n/10**18,'.12f')
+out={'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'own inert actualhistoricalledger arithmetic, no pricing/backtest/contractexecution','selected_address':addr,'events':len(rows),'pages':pages,'start_share_supply_wei':str(S0),'start_round2_pending_wei':str(P0),'start_WETH_balance_before_roll_wei':str(B0),'start_round2_PPS_reconstructed_raw18':str(PPS0),'total_credited_migrated_capital_wei':str(selected_capital),'instant_cash_return_wei':str(selected_cash),'remaining_receipt_amount_raw18':str(selectedpending),'escrow_unredeemed_shares_reconstructed_raw18':str(Hesc),'wallet_actual_shares_raw18':str(shareholds),'H_total_claim_shares_raw18':str(H),'terminal_total_supply_from_mints_burns_raw18':str(S),'terminal_Q_observed_initiate_minus_completed_raw18':str(Q),'terminal_active_supply_lowerbound_S_minus_Q_raw18':str(D),'terminal_WETH_idle_wei':W['result'],'terminal_nativeETH_wei':N['result'],'terminal_new13_locked_collateral_wei':str(locked[0]),'G_gross_WETH_ETH_assets_upper_wei':str(G),'known_three_gas_wei':str(gas),'gas_rows':gasrows,'residual_claim_upper_bound_ceil_wei':str(UB),'incremental_delta_upper_bound_wei':str(deltaUB),'bound_negative':deltaUB<0,'method':'ceil(H*G/(S-Q)), allgrossassets toactive, no deductionnewshort/pending/otherliabilities; plusrealcashout minuscreditedmigrationreference minusknown3gas; not actualexitNAV or originalhistoricalcostprofit','assumptions_pending_review':['source-supportedHreceipt conversion and no hiddenreceiptrights','Qeventsemantics sufficient loweractive denominator','G completeWETHvaultassets or generous upper bound; registry/linkage not independent runtime proof','migrationcredit reference not originalcostbasis; giftedsharepositive included at nocost, not strategyincome']}
+(p/'selected-holder-conservative-accounting.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');(p/'whole-vault-events-combined.json').write_text(json.dumps(rows,ensure_ascii=False)+'\n');print(json.dumps(out,ensure_ascii=False,indent=2))

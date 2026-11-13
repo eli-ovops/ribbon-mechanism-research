@@ -1,0 +1,30 @@
+import json,pathlib,sys,datetime,hashlib
+v=json.loads(sys.argv[1]);p=pathlib.Path(v['phase']);b=p.parent.parent;r=p/'root';r93=b/'evidence/ribbon-fixed12-live-ledger-20261017/root';ef=b/'evidence/ribbon-selected-holder-cashflow-20261017/root/whole-vault-events-combined.json';wf=b/'evidence/ribbon-nov08-fee-basis-20261017/root/WETH-cashflow-rows-before-fee.json';nf=r93/'indexed-native-transfers-combined.json';lf=r93/'fixed12-actual-cashflow-ledger.json';E=json.loads(ef.read_text());W=json.loads(wf.read_text());N=json.loads(nf.read_text())['records'];L=json.loads(lf.read_text())['rows'];T=v['topics'];V='0x25751853eab4d0eb3652b5eb6ecb102a2789644b';zero='0x'+'0'*40;ad=lambda t:'0x'+t[-40:];num=lambda z:int(z,16);key=lambda z:(num(z['blockNumber']),num(z['logIndex']));words=lambda z:[int(z[i:i+64],16) for i in range(2,len(z),64)];E.sort(key=key);fp=lambda f:{'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'bytes':f.stat().st_size};inputs={str(f):fp(f) for f in [ef,wf,nf,lf]};queues={};observed={}
+for e in E:
+ ts=e['topics'];t=ts[0]
+ if t not in [T['initiate'],T['withdraw']]:continue
+ a=ad(ts[1]);w=words(e['data'])
+ if t==T['initiate']:
+  if a in queues and queues[a]['shares']:assert queues[a]['round']==w[1]
+  q=queues.setdefault(a,{'shares':0,'round':w[1]});q['shares']+=w[0];q['round']=w[1]
+ else:
+  q=queues[a];assert q['shares']==w[1] and w[1]>0;rn=q['round'];lo=(w[0]*10**18+w[1]-1)//w[1];hi=((w[0]+1)*10**18-1)//w[1];q['shares']=0
+  z=observed.setdefault(rn,{'min':lo,'max':hi,'count':0,'examples':[]});z['min']=max(z['min'],lo);z['max']=min(z['max'],hi);z['count']+=1;assert z['min']<=z['max'];z['examples'].append({'tx':e['transactionHash'],'cash':str(w[0]),'shares':str(w[1]),'round_associated_from_prior_initiate':rn})
+known=json.loads((r93/'round04-open-receipt.original.txt').read_text())['result'];feeTopic=next(e['topics'][0] for e in known['logs'] if num(e['logIndex'])==294);rows=[]
+for i in range(1,6):
+ f=r93/f'round{i:02d}-open-receipt.original.txt';rc=json.loads(f.read_text())['result'];inputs[str(f)]=fp(f);rn=i+1;cut=(num(rc['blockNumber']),min(num(e['logIndex']) for e in rc['logs']));bef=[e for e in E if key(e)<cut];B=sum(int(x['delta_wei']) for x in W if (x['block'],x['log_index'])<cut);P=0;S=0;Q=0
+ for e in bef:
+  ts=e['topics'];w=words(e['data']);t=ts[0]
+  if t in [T['deposit'],T['instant']] and w[1]==rn:P+=(w[0] if t==T['deposit'] else -w[0])
+  elif t==T['transfer']:
+   if ad(ts[1])==zero:S+=w[0]
+   if ad(ts[2])==zero:S-=w[0]
+  elif t==T['initiate']:Q+=w[0]
+  elif t==T['withdraw']:Q-=w[1]
+ pp=(B-P)*10**18//S;mint=[e for e in rc['logs'] if e['address']==V and e['topics'][0]==T['transfer'] and ad(e['topics'][1])==zero];assert len(mint)==1;M=words(mint[0]['data'])[0];assert M==P*10**18//pp;mintlo=(P*10**18//(M+1)+1) if M else None;minthi=(P*10**18//M) if M else None;assert (M==0 and P==0) or mintlo<=pp<=minthi;oi=observed.get(rn);assert oi is None or oi['min']<=pp<=oi['max'];feeE=[e for e in rc['logs'] if e['address']==V and e['topics'][0]==feeTopic];assert len(feeE)<=1;fees=[x for x in N if x['hash']==rc['transactionHash'] and x['from']==V and x.get('isError')=='0'];F=sum(int(x['value']) for x in fees);PF=None
+ if feeE:
+  z=words(feeE[0]['data']);assert z[1]==F and z[2]==rn;PF=z[0];recipient=ad(feeE[0]['topics'][1]);assert all(x['to']==recipient for x in fees)
+ else:assert F==0
+ Qamt=Q*pp//10**18;lock=int(L[i-1]['collateral_deposited_wei']);assert B-Qamt-F==lock
+ rows.append({'vault_finalized_round':rn,'sample_index':i,'roll_tx':rc['transactionHash'],'roll_cut_block_global_log':list(cut),'B_wei':str(B),'P_pending_wei':str(P),'A_B_minus_P_wei':str(B-P),'S_before_roll_raw18':str(S),'queued_shares_before_roll_raw18':str(Q),'computed_pre_fee_PPS_raw18':str(pp),'PPS_interval_from_actual_deferred_mint':[str(mintlo),str(minthi)],'actual_payout_associated_PPS_interval':{k:(str(z) if k in ['min','max'] else z) for k,z in oi.items()} if oi else None,'actual_mint_raw18':str(M),'queued_amount_at_that_price_wei':str(Qamt),'actual_roll_fee_native_wei':str(F),'performance_fee_from_event_wei':str(PF) if PF is not None else None,'actual_roll_native_fee_records':fees,'actual_next_locked_collateral_wei':str(lock),'balance_minus_queue_minus_fee_equals_actual_locked':True,'actual_period_premium_that_just_ended_wei':str(int(L[i-2]['actual_premium_received_WETH_wei'])) if i>=2 else None,'prior_actual_locked_collateral_wei':str(int(L[i-2]['collateral_deposited_wei'])) if i>=2 else None,'basis_minus_locked_minus_premium_wei':str(B-P-int(L[i-2]['collateral_deposited_wei'])-int(L[i-2]['actual_premium_received_WETH_wei'])) if i>=2 else None})
+f=r/'same-path-five-roll-actual-inputs-and-price-constraints.json';f.write_text(json.dumps({'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'actualhistory monetary/share constraints, sourceversions interpretedseparately','rows':rows,'inputs':inputs,'models':0,'backtests':0,'trades':0},ensure_ascii=False,indent=2)+'\n');(r/'same-path-five-roll-method.inert-python.txt').write_text(v['method']);print(json.dumps({'rolls':[{'round':x['vault_finalized_round'],'PPS':x['computed_pre_fee_PPS_raw18'],'payout_interval':({k:x['actual_payout_associated_PPS_interval'][k] for k in ['min','max','count']} if x['actual_payout_associated_PPS_interval'] else None),'mint_interval':x['PPS_interval_from_actual_deferred_mint'],'real_fee':x['actual_roll_fee_native_wei'],'R_minus_premium':x['basis_minus_locked_minus_premium_wei']} for x in rows],'file':fp(f)},ensure_ascii=False))
